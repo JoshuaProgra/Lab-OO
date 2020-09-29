@@ -1,2 +1,0 @@
-# Lab-OO
-class Spot {   float x, y; // X-coordinate, y-coordinate   float extent; // width and height of the rectangle   float speed; // Distance moved each frame   int direction = 1; // Motion Direction(1 is down, -1 is up)   Spot(float xpos, float ypos, float ext, float sp) {     // Constructor     x = xpos;     y = ypos;     extent = ext;     speed = sp;   }   void move() {     y += (speed * direction);     if ((y > (height - extent / 2)) || (y &lt; extent / 2)) {       direction *= -1;     }   }   void display() {     square(x, y, extent);   } }
